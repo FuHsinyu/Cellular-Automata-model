@@ -1,3 +1,3 @@
 # Cellular-Automata-model  
 Cellular Automata Modelling by Python  
-University of Amesteddam AND ITMO University  
+University of Amesterdam AND ITMO University  
