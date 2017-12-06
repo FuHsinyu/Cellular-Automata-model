@@ -15,7 +15,7 @@
 
 from .pycx_gui import GUI
 from .model import Model
-from .paramsweep import paramsweep
+# from .paramsweep import paramsweep
 
 # When importing everything (from pyics import *) limit it so useful stuff.
 __all__ = ['GUI', 'Model', 'paramsweep']

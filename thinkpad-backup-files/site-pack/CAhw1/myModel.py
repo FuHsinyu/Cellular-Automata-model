@@ -63,7 +63,7 @@ class CAmodel(Model):
         extraLength = Length - len(ruleSet)
         zeroList = [0] * extraLength
         ruleSet = zeroList + ruleSet
-        #print("ruleSet")
+        #print(ruleSet)
         return ruleSet
 
     def check_rule(self, prevState_with_neighbors):

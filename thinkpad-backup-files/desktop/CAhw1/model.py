@@ -7,14 +7,18 @@
 # access them.
 #
 
+
 def make_getter(name):
     """Returns a getter function which returns the attribute `name'."""
     return lambda self: getattr(self, name)
+
+
 def make_setter(name, var_type, user_setter):
     """Returns a setter function which sets the attribute `name', first casting
     it to `type' and passing it through the `user_setter' function."""
     return lambda self, new_val: setattr(self, name,
-            user_setter(var_type(new_val)))
+                                         user_setter(var_type(new_val)))
+
 
 class Model(object):
     """Base class for models, which have a reset, step and draw method, and a

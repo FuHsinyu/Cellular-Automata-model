@@ -28,12 +28,12 @@ class CAmodel(Model):
     def step(self):
         start = 0
         end = start + self.N
-        prevState = self.currentRow
+        prevRow = self.currentRow
         self.currentRow = []
-        prevState.insert(0, prevState[-1])
-        prevState.append(prevState[1])
+        prevRow.insert(0, prevRow[-1])
+        prevRow.append(prevRow[1])
         while start < self.rowLength:
-            preSizeVal = prevState[start:end:1]
+            preSizeVal = prevRow[start:end:1]
             self.currentRow.append(
                 self.rule[self.ruleLength - self.binToDec(preSizeVal, self.k) -
                           1])
@@ -42,16 +42,17 @@ class CAmodel(Model):
 
     def draw(self, cycleLenList):
         plt.rcdefaults()
-        objects = []
         xAxis = np.arange(start=0, stop=len(cycleLenList), step=1)  #
-        print(xAxis)
-        plt.bar(
-            xAxis,
-            cycleLenList,
-            align='center',
-            alpha=0.5,
-            color="silver",
-            edgecolor="yellow")
+        #print(xAxis)
+        plt.errorbar(xAxis, cycleLenList, yerr=[10])
+        #plt.bar(
+        #    xAxis,
+        #    cycleLenList,
+        #    align='center',
+        #    alpha=0.5,
+        #    color="silver",
+        #    edgecolor="yellow")
+        #print("111")
         plt.xlabel('Rules')
         plt.ylabel('Cycle Length')
         plt.title('1D Cellular Automata')
@@ -63,8 +64,8 @@ class CAmodel(Model):
         extraLength = Length - len(ruleSet)
         zeroList = [0] * extraLength
         ruleSet = zeroList + ruleSet
-        #print("ruleSet")
+        #print("not ruleSet")
         return ruleSet
 
-    def check_rule(self, prevState_with_neighbors):
-        return self.rule[binToDec(prevState_with_neighbors, self.k)]
+    def check_rule(self, prevRow_with_neighbors):
+        return self.rule[binToDec(prevRow_with_neighbors, self.k)]
