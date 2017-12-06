@@ -2,13 +2,11 @@ from CAhw1 import GUI
 from CAhw1.myModel import CAmodel
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 #change digit in line 18 and run to get a FAST TESTING RESULT
-initRow = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-]
+initRow = [0] * 100
+for i in range(100):
+    initRow[i] = random.randrange(2)
 r = 1  #range
 systemSize = r * 2 + 1
 k = 2  #base
@@ -16,7 +14,8 @@ rule = 0  #decimal rule initilized
 cycleLenList = []  #final cycle length recording list
 cycleReachedBool = False  #booleanB
 resultDict = dict()  #hash results with respect to rules
-while rule < 256:  #By changing these for FAST TEST
+
+while rule < 6:  #By changing these for FAST TEST
     model = CAmodel(r, k, rule, initRow, systemSize)
     #def __init__(self, range, base, rule, initRow, systemSize):
     runTime = 0  #run times
@@ -36,4 +35,7 @@ while rule < 256:  #By changing these for FAST TEST
     rule += 1  #
     cycleReachedBool = False
     resultDict.clear()
+model.get_random_table(10)
+
+model.get_table_work_through(10)
 model.draw(cycleLenList)

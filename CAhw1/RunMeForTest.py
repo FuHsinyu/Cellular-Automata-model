@@ -2,13 +2,11 @@ from CAhw1 import GUI
 from CAhw1.myModel import CAmodel
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 #change digit in line 18 and run to get a FAST TESTING RESULT
-initRow = [
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-]
+initRow = [0] * 100
+for i in range(100):
+    initRow[i] = random.randrange(2)
 r = 1  #range
 systemSize = r * 2 + 1
 k = 2  #base
