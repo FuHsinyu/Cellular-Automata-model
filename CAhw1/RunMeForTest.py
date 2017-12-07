@@ -1,5 +1,5 @@
-from CAhw1 import GUI
-from CAhw1.myModel import CAmodel
+from pycx_gui import GUI
+from myModel import CAmodel
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -14,7 +14,7 @@ rule = 0  #decimal rule initilized
 cycleLenList = []  #final cycle length recording list
 cycleReachedBool = False  #booleanB
 resultDict = dict()  #hash results with respect to rules
-while rule < 256:  #By changing these for FAST TEST
+while rule < 6:  #By changing these for FAST TEST
     model = CAmodel(r, k, rule, initRow, systemSize)
     #def __init__(self, range, base, rule, initRow, systemSize):
     runTime = 0  #run times

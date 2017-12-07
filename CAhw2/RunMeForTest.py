@@ -1,5 +1,5 @@
-from CAhw1 import GUI
-from CAhw1.myModel import CAmodel
+from pycx_gui import GUI
+from myModel import CAmodel
 import matplotlib.pyplot as plt
 import numpy as np
 import random
