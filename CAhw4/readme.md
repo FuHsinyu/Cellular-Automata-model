@@ -17,3 +17,4 @@ _You may see code in [RunMeGetCAfigure](RunMeGetCAfigure.py)_
 * According to ![result](hw4_result.png)
 when Value = 0.5, reached phase transition  
 You may find code in [RunMeForTest](RunMeForTest.py)
+5. 
