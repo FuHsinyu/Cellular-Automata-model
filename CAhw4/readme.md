@@ -3,7 +3,7 @@
 1. ECA rule 184 is known as the ’traffic rule’. Implement it; use periodic boundary conditions. Explain in what way it models bottleneck-free congestion by looking at its state transition table.
 *  According to ![transiant states](rule184states.png), Rule 184 models the congestion with 1 instead of car and 0 instead of space. Cars are moving toward right. With space to the right of car, car will move at next step, otherwise car stopped. When a lot of cars accumulated in block, the bottlenect formed. On the other hand, when a lot of space in block, congestion is free.  
 2. Show the evolution of a CA of size N = 50 cells for 50 time steps for the ’car’ densities 0.4 and 0.9. Describe briefly what you see.
-* According to ![0.4](ca184_density0.4.png)which density = 0.4 and ![0.9](ca184_density0.9.png) which density = 0.4  
+* According to ![0.4](ca184_density0.4.png)which density = 0.4 and ![0.9](ca184_density0.9.png) which density = 0.9  
 ![Q2](Q2.PNG)
 when density is 40%, the flow is 18 and cars(blue) are mostly moving towards right. On the other side, density = 90%, cars(blue) are in huge congetion and accumulated in grey block.  
 _You may see code in [RunMeGetCAfigure](RunMeGetCAfigure.py)_
