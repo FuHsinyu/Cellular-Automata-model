@@ -39,11 +39,12 @@ systemSize = r * 2 + 1
 initRowLength = 100
 densityListXaxis = list()
 flowListYaxis = list()
-densityRange = np.linspace(0, 1, 51)
+densityRange = np.linspace(0, 1, 51)  #set intervel of densityList
 rule = 184
 criticalDenList = list()
-#TList = 1000 #set TList as T
-TList = range(10, 60, 1)
+TList = [1000]  #set TList as T
+#For Q6
+#TList = range(10, 60, 1)
 for T in TList:  # T
     initStateTimes = 10  # R
     #densityRange = [0.4,[0.9]] # for Qestion 2
@@ -66,12 +67,12 @@ for T in TList:  # T
         densityListXaxis.append(density)
         flowListYaxis.append(np.mean(flowVehicle))
 #For Q6 get critical density and flow figure
-    criticalDen, criticalFlow = get_critical_density_flow(
-        densityListXaxis, flowListYaxis)
-    print("critical density is:", criticalDen, "critical flow is:",
-          criticalFlow)
-    criticalDenList.append(criticalDen)
-model.draw_hw4_criticalDensity_T(criticalDenList, TList)
+#    criticalDen, criticalFlow = get_critical_density_flow(
+#        densityListXaxis, flowListYaxis)
+#    print("critical density is:", criticalDen, "critical flow is:",
+#          criticalFlow)
+#    criticalDenList.append(criticalDen)
+#model.draw_hw4_criticalDensity_T(criticalDenList, TList)
 
 #draw normal density-flow figure
-#model.draw_hw4(densityListXaxis, flowListYaxis)
+model.draw_hw4(densityListXaxis, flowListYaxis)

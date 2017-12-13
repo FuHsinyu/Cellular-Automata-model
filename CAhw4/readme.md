@@ -24,8 +24,8 @@ _Run RunMeForTex.py and changing R(initStateTime) and T arguments to see figure_
 6. Implement a function which takes the ”car flow versus density” data points1 of exercise 4 as input and returns an automatically estimated ’position’ (density value) of the phase transition as output (termed ’critical density’, a scalar). (Note: the returned value does not have to be equal to one of the input densities, i.e., it may be interpolated.) Mention briefly how you implemented this.
 * I assume when T reseached average 0.475/0.525(as critical den is 0.5) means the possibility meet the required 90%.  
 According to ![Q6_criticalList_result_T.png](Q6_criticalList_result_T.png) 
-the minimum T should be around 40~45  
-_You may see code in RunMeForText.py, and delete comment mark # of Tlist=range(40,80,1) I hope I can run T from 0 to 1000 but my pool tablet may die for hard-working_
+the minimum T should be around 40  
+_You may see code in RunMeForText.py, and delete comment mark # of Tlist=range(40,80,1) I hope I can run T from 0 to 1000 and huge R but my pool tablet may die for hard-working_
 
 7. Now it is time to analyze the simulation results, regarding the phenomenon that we started with. Let us say that our minimal model captures the basic phenomenon very well (namely, the existence of a phase transition), using only minimal ingredients (collision avoidance). What can we conclude about the importance of other possible ingredients, such as the gender of drivers or the sizes of their cars, for explaining the existence of the phase transition? Explain why.  
 * According to previous experiments and [reference](CA_traffic_flow_real_model.pdf), two extra ingredients should be carefully considered.  
