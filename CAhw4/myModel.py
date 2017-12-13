@@ -2,7 +2,9 @@ from CAhw1 import Model
 import numpy as np
 import scipy.misc as smp
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 import random
+from matplotlib import colors
 
 
 class CAmodel(Model):
@@ -55,7 +57,9 @@ class CAmodel(Model):
 
     def draw_hw4_bin(self, yAxis):
         plt.rcdefaults()
-        plt.imshow(yAxis, cmap=cmap, norm=norm)
+        #cmap = colors.ListedColormap(['white', 'blue', 'grey'])
+        #norm = colors.BoundaryNorm(bounds, cmap.N)
+        plt.imshow(yAxis, interpolation='nearest')  #, cmap=cmap, norm=norm)
         plt.grid(True)
         #plt.yscale("log")
         plt.xlabel('Density')

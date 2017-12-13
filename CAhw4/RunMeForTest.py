@@ -31,8 +31,8 @@ densityListXaxis = list()
 flowListYaxis = list()
 rowDraw = []
 T = 1000
-densityRange = np.linspace(0, 1, 101)
-#densityRange = [0.4, 0.9]
+densityRange = np.linspace(0, 1, 21)
+densityRange = [0.4]
 for density in densityRange:
     initRow = initial_row(initRowLength, density)
     rule = 184
@@ -41,7 +41,7 @@ for density in densityRange:
     runTime = 0  #run times
     flowVehicle = 0
     #flowTime = 50
-    while runTime < 1000:
+    while runTime < 100:
         currentRow = tuple(model.currentRow)
         runTime += 1
         currentRow = model.step()
@@ -56,6 +56,7 @@ for density in densityRange:
 #np.floor(np.array(rowDraw))
 #print(densityListXaxis, flowListYaxis)
 #print(rowDraw)
-
-#model.draw_hw4_bin(rowDraw)
-model.draw_hw4(densityListXaxis, flowListYaxis)
+#testArr = np.array([[1, 1, 1, 2, 3, 4], [1, 2, 3, 4, 5, 6]])
+#print(np.reshape(rowDraw, (100, 102)))
+model.draw_hw4_bin(rowDraw)
+#model.draw_hw4(densityListXaxis, flowListYaxis)
