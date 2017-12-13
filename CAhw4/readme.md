@@ -4,7 +4,8 @@
 *  According to ![transiant states](rule184states.png), Rule 184 models the congestion with 1 instead of car and 0 instead of space. Cars are moving toward right. With space to the right of car, car will move at next step, otherwise car stopped. When a lot of cars accumulated in block, the bottlenect formed. On the other hand, when a lot of space in block, congestion is free.  
 2. Show the evolution of a CA of size N = 50 cells for 50 time steps for the ’car’ densities 0.4 and 0.9. Describe briefly what you see.
 * According to  
-![0.4](ca184_density0.4.png)  which density = 0.4 and  
+![0.4](ca184_density0.4.png)  
+which density = 0.4 and  
 ![0.9](ca184_density0.9.png)  
 which density = 0.9  
 ![Q2](Q2.PNG)  
@@ -32,6 +33,6 @@ According to
 the minimum T should be around 40  
 _You may see code in RunMeForText.py, and delete comment mark # of Tlist=range(40,80,1) I hope I can run T from 0 to 1000 and huge R but my pool tablet may die for hard-working_
 7. Now it is time to analyze the simulation results, regarding the phenomenon that we started with. Let us say that our minimal model captures the basic phenomenon very well (namely, the existence of a phase transition), using only minimal ingredients (collision avoidance). What can we conclude about the importance of other possible ingredients, such as the gender of drivers or the sizes of their cars, for explaining the existence of the phase transition? Explain why.  
-* According to previous experiments and[reference](CA_traffic_flow_real_model.pdf), two extra ingredients should be carefully considered.  
+* According to previous experiments and [reference](CA_traffic_flow_real_model.pdf), two extra ingredients should be carefully considered.  
   1. Drivers' driving skill and charactristic (ie.aggressive or discreet). For instance, an aggresive driver may like getting closer to front car and a careful driver may like keeping long distance when driving.
   2. Car and driver's ability to speed up or down. Because drivers need time to **slow down/speed up** when they see another car in front of them. Especially when in good flow, it is easy to happen. The velocity is unable to achived at another value in a flash.
