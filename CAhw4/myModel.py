@@ -67,6 +67,31 @@ class CAmodel(Model):
         plt.title('the fundamental diagram of traffic flow')
         plt.show()
 
+    def draw_hw4_criticalDensity_T(slef, criticalDenList, TList):
+        plt.rcdefaults()
+        #objects = []
+        #xtickList = range(256)
+        #xAxis = np.arange(start=0, stop=len(cycleLenList), step=1)  #
+        #print(xAxis)
+        plt.plot(
+            TList,
+            criticalDenList,
+            #align='center',
+            #alpha=0.5,
+            "r^",
+            #ms=10,
+            #color="blue",
+            #edgecolor="yellow",
+            #bottom=0
+        )
+        #plt.xticks(xAxis, xtickList)
+        plt.grid(True)
+        plt.yscale("log")
+        plt.xlabel('Rules')
+        plt.ylabel('Cycle Length')
+        plt.title('1D Cellular Automata')
+        plt.show()
+
     def draw(self, cycleLenList):
         plt.rcdefaults()
         objects = []
