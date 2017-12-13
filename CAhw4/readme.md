@@ -16,9 +16,9 @@ _You may see code in [RunMeGetCAfigure](RunMeGetCAfigure.py)_
 4. Write a function 
 * According to ![result](hw4_result.png)
 when Value = 0.5, reached phase transition  
-You may find code in [RunMeForTest](RunMeForTest.py)
+_You may find code in [RunMeForTest](RunMeForTest.py)_
 5. Now plot the same graph but for a very low T (e.g., T = 5) and a very low number of initial conditions R per density value (e.g., R = 3). What is the effect of such ’undersampling’? Show a plot with undersampled results.  
-* ![lowT_lowR_Q5.png](lowT_lowR_Q5.png)  
+* ![lowT_lowR_Q5.png](Q5_lowT_lowR.png)  
 It is not accurate to expected figure at all.  
 _Run RunMeForTex.py and changing R(initStateTime) and T arguments to see figure_
 6. 
