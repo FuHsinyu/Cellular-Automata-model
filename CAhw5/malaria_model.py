@@ -7,8 +7,8 @@ import time
 #           2 =Infected                 8   =No hungry, iminfected
 #           3 =Immune                   12  =Hungry, infectd
 #                                       16  =Hungry, iminfected
-start = time.clock()
 
+start = time.clock()
 #Parameters
 proOfHumanInfected = 0.3  #suscepitable human + infected mos, the pro of Human
 proOfMosBecomeInfected = 0.3  #the pro of Mos bite human. infected human, iminfected mos,
@@ -35,8 +35,6 @@ pararametrDict = {
 #       [[0, 4], [1, 4], [0, 12], [1, 12], [0, 0]], [[3, 12], [0, 16], [1, 12],
 #                                                    [4, 8], [2, 16]]]
 
-#universe[1:6, 1:6] = map
-#universeList = np.ndarray.tolist(universe)
 
 humanDist = np.random.choice(
     [0, 1, 2, 3], [100, 100, 2], replace=True, p=[0.05, 0.8, 0.1, 0.05])
@@ -183,4 +181,4 @@ for loop in range(loops):
 statisticDraw()
 #excution time in mins
 minElapsed = (time.clock() - start) / 60
-print(minElapsed, "mins are consumed")
+print(int(minElapsed), "mins are consumed")
