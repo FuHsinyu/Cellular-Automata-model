@@ -18,7 +18,7 @@ def dataInit():
         p=[0.7, 0.3])  #Distribution of people who read political medias
     tolerance = np.random.choice(
         [5, 6, 7, 8], [150, 150, 1], replace=True, p=[0.4, 0.3, 0.2, 0.1]
-    )  # How taugh for a person to change his opinion 5,6,7,8 from easy to high
+    )  # How taugh for a person to change his opinion: level 5,6,7,8 from easy to difficult
     for x in range(partyVotes.shape[0]):
         for y in range(partyVotes.shape[1]):
             partyVotes[x][y][1] = readNews[x][y]
