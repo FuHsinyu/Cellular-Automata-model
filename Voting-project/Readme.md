@@ -8,3 +8,4 @@ See a result of draft [video](votingmodel.mp4)
 4. Opinion changing error (TBD)
 5. Others refering from other papers
 
+https://trello.com/b/raRmXmD4/voter-modeling-project-ics
