@@ -63,11 +63,6 @@ def sumOfNeighbors(partyVotes, x, y):  #calculate the sum of neighbours
     sumOfNeighbors = sum((sum1, sum2, sum3))
     return sumOfNeighbors
 
-
-def mediaPromotion():
-    pass
-
-
 def animationDraw():  #Save video to working dir
     plt.legend()
     plt.axis('off')
