@@ -77,7 +77,7 @@ def animationDraw():  #Save video to working dir
     im_ani.save('votingmodel.mp4', writer=animation.FFMpegWriter())
 
 
-days = 100
+days = 10
 partyVotes = dataInit()
 for day in range(days):
     runMajorityWin(partyVotes)
