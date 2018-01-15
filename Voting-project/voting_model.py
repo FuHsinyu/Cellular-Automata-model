@@ -12,12 +12,12 @@ data = np.ones((150, 150))
 def dataInit():
     partyVotes = np.random.choice(
         [0, 1], [150, 150, 3], replace=True,
-        p=[0.5, 0.5])  # 150*150 cells, 0 is supporting party 0, 1 is party1
+        p=[0.9, 0.1])  # 150*150 cells, 0 is supporting party 0, 1 is party1
     readNews = np.random.choice(
         [0, 1], [150, 150, 1], replace=True,
         p=[0.7, 0.3])  #Distribution of people who read political medias
     tolerance = np.random.choice(
-        [5, 6, 7, 8], [150, 150, 1], replace=True, p=[0.4, 0.3, 0.2, 0.1]
+        [5, 6, 7, 8], [150, 150, 1], replace=True, p=[1, 0, 0, 0]
     )  # How taugh for a person to change his opinion: level 5,6,7,8 from easy to difficult
     for x in range(partyVotes.shape[0]):
         for y in range(partyVotes.shape[1]):
@@ -62,6 +62,7 @@ def sumOfNeighbors(partyVotes, x, y):  #calculate the sum of neighbours
         sum3 += thrRowNeighbors[x][0]
     sumOfNeighbors = sum((sum1, sum2, sum3))
     return sumOfNeighbors
+
 
 def animationDraw():  #Save video to working dir
     plt.legend()
